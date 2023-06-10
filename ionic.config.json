@@ -1,0 +1,7 @@
+{
+  "name": "auth-flow",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
