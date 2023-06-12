@@ -38,3 +38,12 @@ https://capacitorjs.com/docs/ios/configuration?_gl=1*150m5ra*_ga*MTc5MzQzNTc1OC4
 ## First, run the Capacitor open command, which opens the native Android project in Android Studio.
 
 -   ionic cap open android
+
+## Similar to iOS, we must enable the correct permissions to use the Camera. Configure these in the AndroidManifest.xml file. Android Studio will likely open this file automatically, but in case it doesn't, locate it under android/app/src/main/.
+
+## Scroll to the Permissions section and ensure these entries are included:
+
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+## Save the file. With permissions in place, we are ready to try out the app on a real device! Connect an Android device to your computer. Within Android Studio, click the "Run" button, select the attached Android device, then click OK to build, install, and launch the app on your device.
