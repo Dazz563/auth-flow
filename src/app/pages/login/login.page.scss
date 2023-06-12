@@ -72,4 +72,11 @@ ion-item {
 		color: #647b9d;
 		font-family: 'Montserrat', sans-serif;
 	}
+	ion-input:invalid {
+		--border-color: #647b9d;
+	}
 }
+
+// ion-input:valid {
+// 	--border-color: purple;
+// }

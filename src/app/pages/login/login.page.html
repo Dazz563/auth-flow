@@ -13,12 +13,12 @@
 				<ion-button fill="outline" shape="round" color="dark" class="login-btn">SignIn</ion-button>
 			</div> -->
 			<div class="wrap-form">
-				<!-- <form [formGroup]="loginForm">
-					<ion-input inputmode="email" formControlName="email" label="Email" type="email" labelPlacement="floating" placeholder="Email"></ion-input>
-					<ion-input inputmode="password" formControlName="password" label="Password" type="password" labelPlacement="floating" placeholder="Password"></ion-input>
-				</form> -->
-				<!-- TESTING TO SEE WITH IONIC GITHUB ISSUE -->
 				<form [formGroup]="loginForm">
+					<ion-input helperText="Enter a valid email" errorText="Invalid email" inputmode="email" formControlName="email" label="Email" type="email" labelPlacement="floating" placeholder="Email"></ion-input>
+					<ion-input errorText="Invalid password" inputmode="password" formControlName="password" label="Password" type="password" labelPlacement="floating" placeholder="Password"></ion-input>
+				</form>
+				<!-- TESTING TO SEE WITH IONIC GITHUB ISSUE -->
+				<!-- <form [formGroup]="loginForm">
 					<ion-item class="item" class="ion-no-padding">
 						<ion-icon name="mail" slot="end"></ion-icon>
 						<ion-input formControlName="email" inputmode="email" label="Email" labelPlacement="floating"> </ion-input>
@@ -30,7 +30,7 @@
 						<ion-input formControlName="password" inputmode="password" label="Password" labelPlacement="floating" type="password"> </ion-input>
 					</ion-item>
 					<div *ngIf="this.loginForm.get('password')?.touched && this.loginForm.get('password')?.errors?.['required']" class="warning">Password field is required</div>
-				</form>
+				</form> -->
 
 				<div class="password-forgot">
 					<ion-button routerLink="/forgot-password" fill="clear" class="ion-no-padding">Forgot Password?</ion-button>
