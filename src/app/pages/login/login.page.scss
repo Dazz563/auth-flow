@@ -1,0 +1,75 @@
+ion-header {
+	position: absolute;
+}
+
+ion-content {
+	--ion-background-color: #e1eaf9;
+	ion-card {
+		--ion-background-color: transparent;
+		box-shadow: none;
+		ion-card-content {
+			.wrap-form {
+				form {
+					ion-input {
+						color: #647b9d;
+						font-family: 'Montserrat', sans-serif;
+					}
+					.warning {
+						color: #eb445a;
+						font-size: 12px;
+						margin-top: 5px;
+					}
+				}
+				.password-forgot {
+					text-align: right;
+					margin-top: 15px;
+					ion-button {
+						font-size: 12px;
+					}
+				}
+				.signin-btn-wrap {
+					margin-top: 25px;
+					text-align: center;
+					color: #f0f4fa;
+					.login-btn {
+						--ion-color-primary: #215ab7;
+					}
+				}
+
+				.social-content {
+					text-align: center;
+					.text-tag {
+						margin-top: 40px;
+						margin-bottom: 15px;
+						text-align: center;
+						span {
+							font-size: 13px;
+							color: #898585;
+						}
+					}
+					ion-button {
+						width: 40px;
+						padding-left: 5px !important;
+					}
+				}
+			}
+		}
+	}
+	.ion-footer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 13px;
+		color: #898585;
+		ion-button {
+			font-size: 10px;
+		}
+	}
+}
+
+ion-item {
+	ion-input {
+		color: #647b9d;
+		font-family: 'Montserrat', sans-serif;
+	}
+}

@@ -1,0 +1,69 @@
+<ion-header class="ion-no-border">
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button defaultHref="/welcome" text=""></ion-back-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+	<ion-card class="ion-no-margin">
+		<ion-card-header>
+			<ion-card-title>Sign Up</ion-card-title>
+			<ion-card-subtitle> Create you account by filling out the form </ion-card-subtitle>
+		</ion-card-header>
+		<ion-card-content>
+			<div class="wrap-form">
+				<form [formGroup]="registerForm">
+					<ion-item class="item" class="ion-no-padding">
+						<ion-icon name="person" slot="end"></ion-icon>
+						<ion-input formControlName="fullName" inputmode="text" label="Full Name" labelPlacement="floating"> </ion-input>
+					</ion-item>
+					<div *ngIf="this.registerForm.get('fullName')?.touched && this.registerForm.get('fullName')?.errors?.['required']" class="warning">Full name field is required</div>
+
+					<ion-item class="item" class="ion-no-padding">
+						<ion-icon name="mail" slot="end"></ion-icon>
+						<ion-input formControlName="email" inputmode="email" label="Email" labelPlacement="floating"> </ion-input>
+					</ion-item>
+					<div *ngIf="this.registerForm.get('email')?.touched && this.registerForm.get('email')?.errors?.['required']" class="warning">Email field is required</div>
+					<div *ngIf="this.registerForm.get('email')?.touched && this.registerForm.get('email')?.errors?.['email']" class="warning">Email format is incorrect</div>
+
+					<ion-item class="item" class="ion-no-padding">
+						<ion-icon name="call" slot="end"></ion-icon>
+						<ion-input formControlName="mobile" inputmode="number" label="Mobile" labelPlacement="floating" type="number"> </ion-input>
+					</ion-item>
+					<div *ngIf="this.registerForm.get('mobile')?.touched && this.registerForm.get('mobile')?.errors?.['required']" class="warning">Mobile field is required</div>
+
+					<ion-item class="item" class="ion-no-padding">
+						<ion-icon name="lock-closed" slot="end"></ion-icon>
+						<ion-input formControlName="password" inputmode="password" label="Password" labelPlacement="floating" type="password"> </ion-input>
+					</ion-item>
+					<div *ngIf="this.registerForm.get('password')?.touched && this.registerForm.get('password')?.errors?.['required']" class="warning">Password field is required</div>
+				</form>
+
+				<div class="signin-btn-wrap">
+					<ion-button (click)="onSubmit()" [disabled]="this.registerForm.invalid" fill="solid" shape="round" class="login-btn">Sign up</ion-button>
+				</div>
+
+				<div class="social-content">
+					<div class="text-tag">
+						<span>Sign Up with</span>
+					</div>
+					<ion-button fill="clear" class="facebook-btn ion-no-padding">
+						<ion-img src="assets/images/facebook.png"></ion-img>
+					</ion-button>
+					<ion-button fill="clear" class="google-btn ion-no-padding">
+						<ion-img src="assets/images/google.png"></ion-img>
+					</ion-button>
+				</div>
+			</div>
+		</ion-card-content>
+	</ion-card>
+</ion-content>
+
+<!-- <form>
+	<ion-input label="First Name" labelPlacement="floating" placeholder="First Name"></ion-input>
+	<ion-input label="Last Name" labelPlacement="floating" placeholder="Last Name"></ion-input>
+	<ion-input label="Email" type="email" labelPlacement="floating" placeholder="Email"></ion-input>
+	<ion-input label="Mobile" type="number" labelPlacement="floating" placeholder="Mobile"></ion-input>
+</form> -->
