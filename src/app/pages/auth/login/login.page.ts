@@ -23,6 +23,6 @@ export class LoginPage implements OnInit {
 		// if (this.loginForm.valid) {
 		// 	this.router.navigate(['/home']);
 		// }
-		this.router.navigate(['/menu/home']);
+		this.router.navigate(['/menu']);
 	}
 }
