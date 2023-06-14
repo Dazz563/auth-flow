@@ -1,0 +1,63 @@
+<ion-menu type="push" contentId="main-content">
+	<ion-header>
+		<ion-toolbar>
+			<ion-title>Menu Content</ion-title>
+		</ion-toolbar>
+	</ion-header>
+	<ion-content class="ion-no-padding">
+		<ion-list>
+			<ion-menu-toggle>
+				<ion-item lines="none" routerLink="home">
+					<ion-icon name="home" slot="end"></ion-icon>
+					<ion-label>Home</ion-label>
+				</ion-item>
+			</ion-menu-toggle>
+			<ion-menu-toggle>
+				<ion-item lines="none" routerLink="inbox">
+					<ion-icon name="mail" slot="end"></ion-icon>
+					<ion-label>Inbox</ion-label>
+				</ion-item>
+			</ion-menu-toggle>
+			<ion-menu-toggle>
+				<ion-item lines="none" routerLink="outbox">
+					<ion-icon name="paper-plane" slot="end"></ion-icon>
+					<ion-label>Outbox</ion-label>
+				</ion-item>
+			</ion-menu-toggle>
+			<ion-menu-toggle>
+				<ion-item lines="none" routerLink="favorites">
+					<ion-icon name="heart" slot="end"></ion-icon>
+					<ion-label>Favorites</ion-label>
+				</ion-item>
+			</ion-menu-toggle>
+			<ion-menu-toggle>
+				<ion-item lines="none" routerLink="archived">
+					<ion-icon name="archive" slot="end"></ion-icon>
+					<ion-label>Archived</ion-label>
+				</ion-item>
+			</ion-menu-toggle>
+			<ion-menu-toggle>
+				<ion-item lines="none" routerLink="trash">
+					<ion-icon name="trash" slot="end"></ion-icon>
+					<ion-label>Trash</ion-label>
+				</ion-item>
+			</ion-menu-toggle>
+			<ion-menu-toggle>
+				<ion-item lines="none" routerLink="spam">
+					<ion-icon name="warning" slot="end"></ion-icon>
+					<ion-label>Spam</ion-label>
+				</ion-item>
+			</ion-menu-toggle>
+			<ion-menu-toggle>
+				<ion-item lines="none" routerLink="/auth/login">
+					<ion-icon name="exit" slot="end"></ion-icon>
+					<ion-label>Logout</ion-label>
+				</ion-item>
+			</ion-menu-toggle>
+		</ion-list>
+	</ion-content>
+</ion-menu>
+
+<ion-content class="ion-padding" id="main-content">
+	<ion-router-outlet></ion-router-outlet>
+</ion-content>

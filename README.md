@@ -19,7 +19,22 @@ Both android and ios folders at the root of the project are created! These are e
 
 -   ionic build
 -   ionic cap copy
+
+## Note: After making updates to the native portion of the code (such as adding a new plugin), use the sync command
+
 -   ionic cap sync
+
+# Splash screen and icon generation
+
+## Install the assets plugin
+
+-   npm install @capacitor/assets --save-dev
+
+## Next create an assets folder on the root of the project containing the splash.png(2732 X 2732) & icon.png(1024 X 1024) files.
+
+## Next, run the assets command to generate the splash screen and icons for all the platforms.
+
+-   npx capacitor-assets generate
 
 # iOS Deployment
 
