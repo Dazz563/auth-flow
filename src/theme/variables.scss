@@ -3,6 +3,13 @@
 
 /** Ionic CSS Variables **/
 :root {
+	/** Application wide styles **/
+	--ion-toolbar-background: var(--ion-color-dark);
+	--ion-toolbar-color: var(--ion-color-dark-contrast);
+	--ion-text-color: hsl(0, 0%, 44%);
+	--ion-font-family: 'Montserrat', sans-serif;
+	--ion-background-color: #e1eaf9;
+
 	/** primary **/
 	--ion-color-primary: #3880ff;
 	--ion-color-primary-rgb: 56, 128, 255;

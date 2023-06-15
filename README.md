@@ -15,7 +15,7 @@
 
 Both android and ios folders at the root of the project are created! These are entirely stanalone native projects that should be considered part of your ionic app
 
-## Everytime you preform a build (a change is made or added) you'll need to copy those changes into your native projects.
+## Everytime you preform a build (a change is made or added to codebase) you'll need to copy those changes into your native projects.
 
 -   ionic build
 -   ionic cap copy
@@ -25,6 +25,11 @@ Both android and ios folders at the root of the project are created! These are e
 -   ionic cap sync
 
 # Splash screen and icon generation
+
+## Install the splash screen plugin
+
+-   npm install @capacitor/splash-screen
+-   npx cap sync
 
 ## Install the assets plugin
 
