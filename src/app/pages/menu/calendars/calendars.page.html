@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>Calendars</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+	<h3>Enter in some information...</h3>
+	<form [formGroup]="form">
+		<ion-input formControlName="username" errorText="Username required" label="Username" labelPlacement="floating" type="text"></ion-input>
+		<!-- TESTING STD DATE SELECTION -->
+		<div>
+			<ion-item class="ion-no-padding">
+				<ion-label>Pick Reservation</ion-label>
+				<ion-datetime-button slot="end" datetime="datetime"></ion-datetime-button>
+			</ion-item>
+			<!-- <div>Field is required</div> -->
+			<ion-modal [keepContentsMounted]="true">
+				<ng-template>
+					<ion-datetime presentation="date-time" (ionChange)="onSelectDate($event)" [showDefaultButtons]="true" id="datetime"></ion-datetime>
+				</ng-template>
+			</ion-modal>
+			<!-- <ion-popover [keepContentsMounted]="true">
+				<ng-template>
+					<ion-datetime presentation="date" (ionChange)="onSelectDate($event)" [showDefaultButtons]="true" id="datetime"></ion-datetime>
+				</ng-template>
+			</ion-popover> -->
+		</div>
+		<!-- TESTING WHEEL SELECTION -->
+		<div>
+			<ion-item class="ion-no-padding">
+				<ion-label>Car booking</ion-label>
+				<ion-datetime-button slot="end" datetime="booking"></ion-datetime-button>
+			</ion-item>
+			<!-- <div>Field is required</div> -->
+			<ion-modal [keepContentsMounted]="true">
+				<ng-template>
+					<ion-datetime presentation="date-time" [preferWheel]="true" (ionChange)="onSelectDate($event)" [showDefaultButtons]="true" id="booking"></ion-datetime>
+				</ng-template>
+			</ion-modal>
+			<!-- <ion-popover [keepContentsMounted]="true">
+				<ng-template>
+					<ion-datetime presentation="date" (ionChange)="onSelectDate($event)" [showDefaultButtons]="true" id="datetime"></ion-datetime>
+				</ng-template>
+			</ion-popover> -->
+		</div>
+
+		<!-- TESTING MULTIPLE DATE SELECTION -->
+		<!-- <ion-datetime presentation="date" [showDefaultButtons]="true" [multiple]="true" (ionChange)="showSelectedDates($event)"></ion-datetime> -->
+		<!-- <ion-card>
+			<ion-card-content>
+				<h2>Selected dates</h2>
+				<b>{{ selectedDates | json }}</b>
+			</ion-card-content>
+		</ion-card> -->
+	</form>
+</ion-content>

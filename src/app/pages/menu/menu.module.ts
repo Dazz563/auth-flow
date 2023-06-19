@@ -14,6 +14,8 @@ import {SpamPage} from './spam/spam.page';
 import {FavoritesPage} from './favorites/favorites.page';
 import {HomePage} from './home/home.page';
 import {TrashPage} from './trash/trash.page';
+import {CalendarsPage} from './calendars/calendars.page';
+import {CardsPage} from './cards/cards.page';
 
 @NgModule({
 	imports: [
@@ -26,6 +28,8 @@ import {TrashPage} from './trash/trash.page';
 	declarations: [
 		MenuPage, //
 		HomePage,
+		CardsPage,
+		CalendarsPage,
 		InboxPage,
 		OutboxPage,
 		FavoritesPage,

@@ -9,6 +9,8 @@ import {SpamPage} from './spam/spam.page';
 import {FavoritesPage} from './favorites/favorites.page';
 import {HomePage} from './home/home.page';
 import {TrashPage} from './trash/trash.page';
+import {CalendarsPage} from './calendars/calendars.page';
+import {CardsPage} from './cards/cards.page';
 
 const routes: Routes = [
 	{
@@ -23,6 +25,14 @@ const routes: Routes = [
 			{
 				path: 'home',
 				component: HomePage,
+			},
+			{
+				path: 'cards',
+				component: CardsPage,
+			},
+			{
+				path: 'calendars',
+				component: CalendarsPage,
 			},
 			{
 				path: 'inbox',

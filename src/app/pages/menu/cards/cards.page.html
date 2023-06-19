@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>Cards</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+	<ion-card class="ion-no-margin">
+		<ion-card-header>
+			<ion-card-title>Card Title</ion-card-title>
+			<ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+		</ion-card-header>
+
+		<ion-card-content> Here's a small text description for the card content. Nothing more, nothing less. </ion-card-content>
+	</ion-card>
+
+	<ion-grid>
+		<ion-row>
+			<ion-col size-md="6" offset-md="3" size-xl="4" offset-xl="4">
+				<ion-card>
+					<img alt="Silhouette of mountains" src="../../../../assets/ferrari.jpeg" />
+					<ion-card-header>
+						<ion-card-title>Card Title</ion-card-title>
+						<ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+					</ion-card-header>
+
+					<ion-card-content> Here's a small text description for the card content. Nothing more, nothing less. </ion-card-content>
+				</ion-card>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<ion-grid>
+		<ion-row>
+			<ion-col size-md="6" offset-md="3" size-xl="4" offset-xl="4">
+				<ion-card>
+					<ion-card-header>
+						<ion-card-title>Card Title</ion-card-title>
+						<ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+					</ion-card-header>
+
+					<ion-card-content>
+						<ion-input helperText="Place you gawdamname bruther!" label="First Name" type="text" errorText="Field Required" labelPlacement="floating"></ion-input>
+						<ion-input label="Password" type="password" errorText="Field Required" labelPlacement="floating"></ion-input>
+
+						<div class="ion-margin-vertical ion-text-center">
+							<ion-button color="danger" fill="outline"><ion-icon slot="end" color="danger" name="close"></ion-icon>clear</ion-button>
+							<ion-button fill="outline"><ion-icon slot="end" color="primary" name="add"></ion-icon>Add Item</ion-button>
+						</div>
+					</ion-card-content>
+				</ion-card>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>
