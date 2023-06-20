@@ -1,13 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>entertainment</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">entertainment</ion-title>
-    </ion-toolbar>
-  </ion-header>
+	<ion-tabs>
+		<ion-tab-bar slot="bottom">
+			<ion-tab-button tab="music">
+				<ion-icon name="play-circle"></ion-icon>
+				Listen Now
+			</ion-tab-button>
+			<ion-tab-button tab="radio">
+				<ion-icon name="radio"></ion-icon>
+				Radio
+			</ion-tab-button>
+			<ion-tab-button tab="library">
+				<ion-icon name="library"></ion-icon>
+				Library
+			</ion-tab-button>
+			<ion-tab-button tab="search">
+				<ion-icon name="search"></ion-icon>
+				Search
+			</ion-tab-button>
+		</ion-tab-bar>
+	</ion-tabs>
 </ion-content>
