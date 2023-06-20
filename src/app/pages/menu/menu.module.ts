@@ -16,6 +16,8 @@ import {HomePage} from './home/home.page';
 import {TrashPage} from './trash/trash.page';
 import {CalendarsPage} from './calendars/calendars.page';
 import {CardsPage} from './cards/cards.page';
+import {ListsPage} from './lists/lists.page';
+import {ListDetailPage} from './lists/list-detail/list-detail.page';
 
 @NgModule({
 	imports: [
@@ -28,6 +30,8 @@ import {CardsPage} from './cards/cards.page';
 	declarations: [
 		MenuPage, //
 		HomePage,
+		ListsPage,
+		ListDetailPage,
 		CardsPage,
 		CalendarsPage,
 		InboxPage,

@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>Lists</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+	<!-- <ion-list [inset]="true"> -->
+	<ion-list lines="">
+		<ion-item *ngFor="let recipe of recipes" [routerLink]="[recipe.id]">
+			<!-- <ion-item *ngFor="let recipe of recipes" [routerLink]="[recipe.id]"> -->
+			<ion-avatar slot="start">
+				<ion-img [src]="recipe.imageUrl"></ion-img>
+			</ion-avatar>
+			<ion-label>{{ recipe.title }}</ion-label>
+		</ion-item>
+	</ion-list>
+</ion-content>

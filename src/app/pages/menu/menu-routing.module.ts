@@ -11,6 +11,8 @@ import {HomePage} from './home/home.page';
 import {TrashPage} from './trash/trash.page';
 import {CalendarsPage} from './calendars/calendars.page';
 import {CardsPage} from './cards/cards.page';
+import {ListsPage} from './lists/lists.page';
+import {ListDetailPage} from './lists/list-detail/list-detail.page';
 
 const routes: Routes = [
 	{
@@ -25,6 +27,20 @@ const routes: Routes = [
 			{
 				path: 'home',
 				component: HomePage,
+			},
+			{
+				path: 'lists',
+				component: ListsPage,
+				// children: [
+				// 	{
+				// 		path: 'list-detail/:id',
+				// 		component: ListDetailPage,
+				// 	},
+				// ],
+			},
+			{
+				path: 'lists/:id',
+				component: ListDetailPage,
 			},
 			{
 				path: 'cards',
@@ -57,6 +73,10 @@ const routes: Routes = [
 			{
 				path: 'spam',
 				component: SpamPage,
+			},
+			{
+				path: 'entertainment',
+				loadChildren: () => import('./entertainment/entertainment.module').then((m) => m.EntertainmentPageModule),
 			},
 		],
 	},
