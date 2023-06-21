@@ -1,0 +1,14 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="primary">
+			<ion-button (click)="onCancel()">
+				<ion-icon name="close"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+		<ion-title>{{ action === 'create' ? 'Create Place' : selectedPlace.name }}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-button (click)="onSubmit()">Save</ion-button>
+</ion-content>

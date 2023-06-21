@@ -6,7 +6,7 @@ import {EntertainmentPage} from './entertainment.page';
 const routes: Routes = [
 	{
 		path: '',
-		redirectTo: 'music',
+		redirectTo: 'places',
 		pathMatch: 'full',
 	},
 	{
@@ -28,6 +28,10 @@ const routes: Routes = [
 			{
 				path: 'search',
 				loadChildren: () => import('./search/search.module').then((m) => m.SearchPageModule),
+			},
+			{
+				path: 'places',
+				loadChildren: () => import('./places/places.module').then((m) => m.PlacesPageModule),
 			},
 		],
 	},
