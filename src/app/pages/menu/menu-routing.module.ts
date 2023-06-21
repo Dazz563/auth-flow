@@ -13,6 +13,7 @@ import {CalendarsPage} from './calendars/calendars.page';
 import {CardsPage} from './cards/cards.page';
 import {ListsPage} from './lists/lists.page';
 import {ListDetailPage} from './lists/list-detail/list-detail.page';
+import {VirtualScrollPage} from './virtual-scroll/virtual-scroll.page';
 
 const routes: Routes = [
 	{
@@ -77,6 +78,10 @@ const routes: Routes = [
 			{
 				path: 'entertainment',
 				loadChildren: () => import('./entertainment/entertainment.module').then((m) => m.EntertainmentPageModule),
+			},
+			{
+				path: 'virtual-scroll',
+				component: VirtualScrollPage,
 			},
 		],
 	},
